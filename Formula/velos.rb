@@ -6,21 +6,21 @@ class Velos < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/velos-io/velos/releases/download/v#{version}/velos-darwin-arm64.tar.gz"
-      sha256 "placeholder-arm64-darwin"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-arm64.tar.gz"
+      sha256 "0548969e34e12a7d21c39c8c17ac4910a138e7e8ea694525b8efe5f651b9fc0a"
     else
-      url "https://github.com/velos-io/velos/releases/download/v#{version}/velos-darwin-amd64.tar.gz"
-      sha256 "placeholder-amd64-darwin"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-amd64.tar.gz"
+      sha256 "a89ee38f58b0c1425f3efec234963deb13f5721715189ac9618d1af81b1e79ca"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/velos-io/velos/releases/download/v#{version}/velos-linux-arm64.tar.gz"
-      sha256 "placeholder-arm64-linux"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-arm64.tar.gz"
+      sha256 "fbb36ee6bab28f7360d668115ca5b8ba36a3b3ec53f7d3e94f0df1893e9b28e6"
     else
-      url "https://github.com/velos-io/velos/releases/download/v#{version}/velos-linux-amd64.tar.gz"
-      sha256 "placeholder-amd64-linux"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-amd64.tar.gz"
+      sha256 "365fed5b38538f814f7cbb39e944ee26d848b9233461c6b597cd40c03331ef2e"
     end
   end
 
