@@ -1,26 +1,26 @@
 class Velos < Formula
   desc "High-performance deployment compiler and orchestrator for Velos specifications"
   homepage "https://github.com/velos-io/velos"
-  version "0.1.7"
+  version "0.1.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-arm64.tar.gz"
-      sha256 "3e97f21a761236ad8ff82ef0a51d3b053a022d9825c4b9a18b46ca3618d97245"
+      sha256 "fd1d9be0425de77b7edffde360236a0f2b31b4648f246726c044b40e1fcbac97"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-amd64.tar.gz"
-      sha256 "e4c05aa3bf6e351713d061dc8d3fe9f7e3fd66340de61b5c460941653c1ee527"
+      sha256 "57f6f9199f11f74d65fc54c52ec8da34506b2334a9f56ec0ba6784f6a2c127bb"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-arm64.tar.gz"
-      sha256 "c145ebaf6b262b6a5d2545578dd4a70269880335026402d13f74c99255b1db59"
+      sha256 "4ffb57f91825013f20d00c69767ddc95edb2e993cd84e8873c9e930fa92d25e8"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-amd64.tar.gz"
-      sha256 "5de33b67b75cb291fa6eafdb5a3080d4c55f16f4d3552632d5696b56b5ed62cf"
+      sha256 "d007257d5c84a93a8c2a5b30a7044bdb4365a29fb94aaf9c80884dcd22afed7b"
     end
   end
 
