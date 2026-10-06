@@ -1,6 +1,6 @@
 class Ved < Formula
   desc "High-performance deployment compiler and orchestrator for Ved specifications"
-  homepage "https://github.com/velos-io/velos"
+  homepage "https://github.com/velos-io/ved"
   version "0.1.11"
   license "Apache-2.0"
 
