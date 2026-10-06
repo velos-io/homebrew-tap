@@ -1,38 +1,33 @@
 class Ved < Formula
   desc "High-performance deployment compiler and orchestrator for Ved / Velos specifications"
   homepage "https://github.com/velos-io/velos"
-  version "0.1.10"
+  version "0.1.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-arm64.tar.gz"
-      sha256 "08d8f2127df2a0cb3670302a50fa1bdae0cf48a3d18bfacc8d3a51093ea4181c"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-darwin-arm64.tar.gz"
+      sha256 "8dd87d06d3351befc1365ba96631148c36ad0896fa8b48fcbb7bc5be9a07c820"
     else
-      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-darwin-amd64.tar.gz"
-      sha256 "79f1c0fe6541a90e4b40d41cf1541757f0b1e0936f162c2f93a253137363c7ea"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-darwin-amd64.tar.gz"
+      sha256 "683f88b922a4afd7dcaaf224d6b8518e4605d9cc022223e45a874bfac7a6d9f0"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-arm64.tar.gz"
-      sha256 "ab1f5a223a50d60930207dfe8c3d7b37ee15dabe5202c14636110e33e248beed"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-linux-arm64.tar.gz"
+      sha256 "61dd199a0cc3189d64d13fd98001268be18a967eef25b9886c7da1ae7d83d1df"
     else
-      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/velos-linux-amd64.tar.gz"
-      sha256 "26c2d2b28646617f8a5e4fbad910a83ed5f2f4c8e9cdb455f50cc8f30d093af6"
+      url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-linux-amd64.tar.gz"
+      sha256 "21f8aebcd0b5d4d4b656559c756630cfa51fdc165114f8a4ef0f9f2db5eef719"
     end
   end
 
   def install
-    if File.exist?("ved")
-      bin.install "ved"
-      bin.install "velos" rescue nil
-      bin.install_symlink "#{bin}/ved" => "velos" unless File.exist?("#{bin}/velos")
-    else
-      bin.install "velos" => "ved"
-      bin.install_symlink "#{bin}/ved" => "velos"
-    end
+    bin.install "ved"
+    bin.install "velos" rescue nil
+    bin.install_symlink "#{bin}/ved" => "velos" unless File.exist?("#{bin}/velos")
   end
 
   test do
