@@ -1,5 +1,5 @@
-class Velos < Formula
-  desc "High-performance deployment compiler and orchestrator for Velos specifications"
+class Ved < Formula
+  desc "High-performance deployment compiler and orchestrator for Ved / Velos specifications"
   homepage "https://github.com/velos-io/velos"
   version "0.1.10"
   license "Apache-2.0"
@@ -25,12 +25,17 @@ class Velos < Formula
   end
 
   def install
-    bin.install "velos"
-    bin.install "ved" rescue nil
-    bin.install_symlink "#{bin}/velos" => "ved" unless File.exist?("#{bin}/ved")
+    if File.exist?("ved")
+      bin.install "ved"
+      bin.install "velos" rescue nil
+      bin.install_symlink "#{bin}/ved" => "velos" unless File.exist?("#{bin}/velos")
+    else
+      bin.install "velos" => "ved"
+      bin.install_symlink "#{bin}/ved" => "velos"
+    end
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/velos --version")
+    assert_match version.to_s, shell_output("#{bin}/ved --version")
   end
 end
