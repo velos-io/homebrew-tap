@@ -1,26 +1,26 @@
 class Ved < Formula
   desc "High-performance deployment compiler and orchestrator for Ved specifications"
   homepage "https://github.com/velos-io/ved"
-  version "0.2.1"
+  version "0.2.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-darwin-arm64.tar.gz"
-      sha256 "6b99c50dac7af975f5b7c3c479da155d6611657d828952cee6f4dab7153d3db9"
+      sha256 "4718ca79ee0cb1332b7ebdac6fe24b6983b7807199a65da4418dcbab95be4524"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-darwin-amd64.tar.gz"
-      sha256 "86b39d6fb02d695ad0fa2353e03721fa199e962e2980d2b2a6ca8a761fb36fa1"
+      sha256 "565fb1b061a91c6e5ba9afaa72d85e9da38f3334f875da8b1fc2c8c41dce9246"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-linux-arm64.tar.gz"
-      sha256 "f0b1db9436250fb1750adb8f91a0a39a98d908adc8b784b0523ca050d851116a"
+      sha256 "56615371a56ccd20c95a413ab93de214f8a322db5e4a93def069450d3c98651d"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/ved-linux-amd64.tar.gz"
-      sha256 "648d3a079d46eef8e97274d5a5f27e9e70c3725a7d86020f73bf16d4ceb4ebd5"
+      sha256 "ef1e542a6fa0f9dbc4fe5923ad91b731db7ad19c118d34fc2289fba4ad3fe536"
     end
   end
 
