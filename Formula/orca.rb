@@ -4,26 +4,26 @@
 class Orca < Formula
   desc "Autonomous agent orchestrator in Rust"
   homepage "https://github.com/velos-io/agent-orc"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/orca-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "51467e3f4e11661cd0dcdc32870f44eef621250baf649d2e469218c1de2de7a9"
+      sha256 "e8353a777c5d0e81805f7fddba46525991149d6e360ed537600d377badaa9242"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/orca-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "51467e3f4e11661cd0dcdc32870f44eef621250baf649d2e469218c1de2de7a9"
+      sha256 "e8353a777c5d0e81805f7fddba46525991149d6e360ed537600d377badaa9242"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/orca-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "51467e3f4e11661cd0dcdc32870f44eef621250baf649d2e469218c1de2de7a9"
+      sha256 "e8353a777c5d0e81805f7fddba46525991149d6e360ed537600d377badaa9242"
     else
       url "https://github.com/velos-io/homebrew-tap/releases/download/v#{version}/orca-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "51467e3f4e11661cd0dcdc32870f44eef621250baf649d2e469218c1de2de7a9"
+      sha256 "e8353a777c5d0e81805f7fddba46525991149d6e360ed537600d377badaa9242"
     end
   end
 
