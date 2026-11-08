@@ -22,3 +22,4 @@ brew install velos
 | Formula | Description |
 |---|---|
 | `velos` | High-performance deployment compiler and orchestrator for Velos specifications |
+| `orca` | Autonomous multi-provider agent orchestrator in Rust |
