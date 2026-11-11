@@ -4,26 +4,26 @@
 class Orca < Formula
   desc "Autonomous agent orchestrator in Rust"
   homepage "https://github.com/velos-io/getorca"
-  version "0.2.10"
+  version "0.2.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "34d8796405ce0f6a978a2f1df518aac5f75e801e0dc62e0e2fbfac9d3a57a13d"
+      sha256 "a7e120aa387f8d6ca823bc3d2941aacfc8f4e6d5b19d7d8d1df3c1323b1a2207"
     else
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "34d8796405ce0f6a978a2f1df518aac5f75e801e0dc62e0e2fbfac9d3a57a13d"
+      sha256 "a7e120aa387f8d6ca823bc3d2941aacfc8f4e6d5b19d7d8d1df3c1323b1a2207"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "34d8796405ce0f6a978a2f1df518aac5f75e801e0dc62e0e2fbfac9d3a57a13d"
+      sha256 "a7e120aa387f8d6ca823bc3d2941aacfc8f4e6d5b19d7d8d1df3c1323b1a2207"
     else
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "34d8796405ce0f6a978a2f1df518aac5f75e801e0dc62e0e2fbfac9d3a57a13d"
+      sha256 "a7e120aa387f8d6ca823bc3d2941aacfc8f4e6d5b19d7d8d1df3c1323b1a2207"
     end
   end
 
