@@ -10,10 +10,10 @@ class Dusky < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/dusky-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "5fc559e8a8d3970c57666e7ddc67d0a6f9bfa74c5d76dfef4e158a3c37cc4165"
+      sha256 "b556097302d7c4141a4611ee7b65706df0a7791642220bd86a5b95868b5df8e4"
     else
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/dusky-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "9f2e621aa776285a561b50aea5af42f823b7bbc7d7082f938804b22878867e59"
+      sha256 "f9ad7d8f144c1e69eec4e5f2fda58faa150c1179eb1c9d3da631fe8f2e90c354"
     end
   end
 
