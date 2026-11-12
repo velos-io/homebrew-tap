@@ -10,20 +10,20 @@ class Orca < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "bc768c0c72ef5ffe1c0387f0c05ef3969f96a560e482391bf263103ccdacd024"
+      sha256 "c390a94db5829f55fcc9c98ff62307f757021bface18e72ef9bfdf293331afa7"
     else
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "bc768c0c72ef5ffe1c0387f0c05ef3969f96a560e482391bf263103ccdacd024"
+      sha256 "c390a94db5829f55fcc9c98ff62307f757021bface18e72ef9bfdf293331afa7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bc768c0c72ef5ffe1c0387f0c05ef3969f96a560e482391bf263103ccdacd024"
+      sha256 "c390a94db5829f55fcc9c98ff62307f757021bface18e72ef9bfdf293331afa7"
     else
       url "https://github.com/velos-io/getorca/releases/download/v#{version}/orca-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bc768c0c72ef5ffe1c0387f0c05ef3969f96a560e482391bf263103ccdacd024"
+      sha256 "c390a94db5829f55fcc9c98ff62307f757021bface18e72ef9bfdf293331afa7"
     end
   end
 
