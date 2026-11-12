@@ -22,4 +22,6 @@ brew install velos
 | Formula | Description |
 |---|---|
 | `velos` | High-performance deployment compiler and orchestrator for Velos specifications |
-| `orca` | Autonomous multi-provider agent orchestrator in Rust |
+| `dusky` | Autonomous multi-provider agent orchestrator in Rust |
+
+Install Dusky with `brew install velos-io/tap/dusky`.
