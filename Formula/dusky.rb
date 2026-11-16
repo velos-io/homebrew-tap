@@ -4,13 +4,13 @@
 class Dusky < Formula
   desc "Autonomous agent orchestrator in Rust"
   homepage "https://github.com/velos-io/dusky"
-  version "0.2.26"
+  version "0.2.27"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/velos-io/dusky/releases/download/v#{version}/dusky-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "839b583bcaa978d848d94a30cadf23ca295349807d2849f3bc018e75013fd659"
+      sha256 "ff067d1c865a96602b579f8c96fe19a945c345ee4aeb0723653762d50fbc0cef"
     else
       odie "No Dusky binary is published for x86_64-apple-darwin in this release"
     end
